@@ -1,0 +1,2 @@
+defmodule Maester do
+end

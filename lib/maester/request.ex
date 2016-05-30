@@ -15,4 +15,5 @@ defmodule Maester.Request do
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}), do: {:ok, Poison.Parser.parse!(body)}
+  defp handle_response({:ok, %{status_code: 404}}), do: {:error, "Not found"}
 end

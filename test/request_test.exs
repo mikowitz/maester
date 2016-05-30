@@ -7,4 +7,10 @@ defmodule RequestTest do
 
     assert hd(authors) == "George R. R. Martin"
   end
+
+  test "returns correct error on 404" do
+    {:error, message} = Maester.Request.make("books/100")
+
+    assert message == "Not found"
+  end
 end

@@ -1,8 +1,8 @@
 defmodule Maester.Character do
   @moduledoc """
-  Handles the request of characters
+  Gets character information
   """
-  
+
   alias Maester.Request, as: Request
 
   @doc """

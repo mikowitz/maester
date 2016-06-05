@@ -8,6 +8,22 @@ defmodule RequestTest do
     assert hd(authors) == "George R. R. Martin"
   end
 
+  test "returns correct data on valid requests with filters" do
+    {:ok, jon} = Maester.Request.make("characters", %{:name => "Jon Snow"})
+    jon_dob =
+      jon
+      |> List.first
+      |> Map.fetch!("born")
+
+    assert jon_dob == "In 283 AC"
+
+    filters = %{:gender => "female", :culture => "westeros"}
+    {:ok, female_westerosi} = Maester.Request.make("characters", filters)
+    first = List.first(female_westerosi)
+
+    assert first["gender"] == "Female"
+  end
+
   test "returns correct error on 404" do
     {:error, message} = Maester.Request.make("books/100")
 

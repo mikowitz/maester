@@ -6,7 +6,7 @@ defmodule Maester.House do
   alias Maester.Request, as: Request
 
   @doc """
-  Gets all hosues
+  Gets all houses
   """
   def all do
     Request.make("houses")

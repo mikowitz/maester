@@ -4,7 +4,7 @@ defmodule Maester.Mixfile do
   def project do
     [
       app: :maester,
-      version: "0.0.0",
+      version: "1.0.0",
       elixir: "~> 1.2",
       description: description,
       package: package,

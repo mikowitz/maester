@@ -22,6 +22,14 @@ Then run `mix deps.get`.
 
 Check out the fancy Hexdocs [here](https://hexdocs.pm/maester/).
 
+First of all, add Maester to the `application` function in your `mix.exs`:
+
+```elixir
+def application do
+  [applications: [:logger, :maester]]
+end
+```
+
 You got three modules under `Maester`: `Book`, `Character`, `House`, and `Request`. The first three allow you get the respective resources with a `by_id` and `all` functions. `all` takes it optional filters. See the [API documentation](https://anapioficeandfire.com/Documentation) for possible filters and pass them in as a map.
 
 `Request` exposes a `make` function that allows you to write any query and a filter map. The other modules use it under the hood.

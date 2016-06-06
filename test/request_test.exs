@@ -10,10 +10,7 @@ defmodule RequestTest do
 
   test "returns correct data on valid requests with filters" do
     {:ok, jon} = Maester.Request.make("characters", %{:name => "Jon Snow"})
-    jon_dob =
-      jon
-      |> List.first
-      |> Map.fetch!("born")
+    jon_dob = Map.fetch!(jon, "born")
 
     assert jon_dob == "In 283 AC"
 

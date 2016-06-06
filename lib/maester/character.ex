@@ -6,10 +6,10 @@ defmodule Maester.Character do
   alias Maester.Request, as: Request
 
   @doc """
-  Gets all characters
+  Gets all characters with optional filters
   """
-  def all do
-    Request.make("characters")
+  def all(filters \\ %{}) do
+    Request.make("characters", filters)
   end
 
   @doc """

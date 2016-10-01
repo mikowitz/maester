@@ -26,10 +26,4 @@ defmodule RequestTest do
 
     assert message == "Not found"
   end
-
-  test "returns correct error on 400" do
-    {:error, message} = Maester.Request.make("books/banana")
-
-    assert message == "Invalid request"
-  end
 end

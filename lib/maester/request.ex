@@ -23,6 +23,7 @@ defmodule Maester.Request do
   defp handle_response({:ok, %{status_code: 200, body: body}}), do: {:ok, Parser.parse!(body)}
   defp handle_response({:ok, %{status_code: 400}}), do: {:error, "Invalid request"}
   defp handle_response({:ok, %{status_code: 404}}), do: {:error, "Not found"}
+  defp handle_response({:ok, %{status_code: 500}}), do: {:error, "Server error"}
 
   defp handle_body({:ok, body}) when is_map(body), do: {:ok, body}
   defp handle_body({:ok, body}) when length(body) == 1, do: {:ok, List.first(body)}

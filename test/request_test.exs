@@ -12,7 +12,7 @@ defmodule RequestTest do
     {:ok, jon} = Maester.Request.make("characters", %{:name => "Jon Snow"})
     jon_dob = Map.fetch!(jon, "born")
 
-    assert jon_dob == "In 283 AC"
+    assert jon_dob == "In 283 AC"
 
     filters = %{:gender => "female", :culture => "westeros"}
     {:ok, female_westerosi} = Maester.Request.make("characters", filters)

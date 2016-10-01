@@ -3,9 +3,9 @@ defmodule HouseTest do
 
   test "returns all houses" do
     {:ok, houses} = Maester.House.all
-    stark = Enum.at(characters, 361)
+    algood = hd(houses)
 
-    assert stark["words"] == "Winter is Coming"
+    assert algood["name"] == "House Algood"
   end
 
   test "returns house by id" do

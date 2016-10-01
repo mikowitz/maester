@@ -36,6 +36,8 @@ You got three modules under `Maester`: `Book`, `Character`, `House`, and `Reques
 
 In case of an error, you will get an `{:error, message}` tuple.
 
+For pagination, you can use the API's [pagination options](https://anapioficeandfire.com/Documentation#pagination) as filters, though if you need to find a specific item it's better to use the other filters.
+
 ## Examples
 
 Getting all characters who are female:
@@ -48,6 +50,12 @@ Getting a house by id:
 
 ```elixir
 Maester.House.by_id(378)
+```
+
+Getting the second page of characters:
+
+```elixir
+Maester.Character.all(%{:page => 2})
 ```
 
 You get the idea.

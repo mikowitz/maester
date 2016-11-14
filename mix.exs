@@ -18,10 +18,10 @@ defmodule Maester.Mixfile do
 
   defp deps do
     [
-      {:earmark, "~> 0.2", only: :dev},
-      {:ex_doc, "~> 0.11", only: :dev},
-      {:httpoison, "~> 0.8"},
-      {:poison,    "~> 2.1"}
+      {:earmark, "~> 1.0.3", only: :dev},
+      {:ex_doc, "~> 0.14", only: :dev},
+      {:httpoison, "~> 0.10"},
+      {:poison,    "~> 3.0"}
     ]
   end
 

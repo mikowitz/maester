@@ -2,7 +2,9 @@
 
 > An API of Ice and Fire client for Elixir
 
-[![Build Status](https://travis-ci.org/sotojuan/maester.svg?branch=master)](https://travis-ci.org/sotojuan/maester)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+  
+This project is unmaintained: I have no interest in maintaining it any more. If you want to take over, let me know at juan@juansoto.me.
 
 ## Install
 
